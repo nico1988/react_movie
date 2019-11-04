@@ -14,6 +14,7 @@ const App = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
+    console.log("user effect trigger")
     axios.get(MOVIE_API_URL).then(jsonResponse => {
       dispatch({
         type: "SEARCH_MOVIES_SUCCESS",
@@ -23,9 +24,9 @@ const App = () => {
   }, []);
 
   // you can add this to the onClick listener of the Header component
-  const refreshPage = () => {
-    window.location.reload();
-  };
+  // const refreshPage = () => {
+  //   window.location.reload();
+  // };
 
   const search = searchValue => {
     dispatch({
