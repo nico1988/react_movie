@@ -13,6 +13,7 @@ const Movie = ({ movie }) => {
       <div>
         <img
           width="200"
+          title={`${movie.Title}`}
           alt={`The movie titled: ${movie.Title}`}
           src={poster}
         />
